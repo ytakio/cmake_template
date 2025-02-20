@@ -17,7 +17,8 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(googletest)
 
-target_link_libraries(test_lib PRIVATE gtest_main sample_add)
+target_link_libraries(test_lib
+    PRIVATE gtest_main sample_add sample_sub)
 
 include(GoogleTest)
 gtest_discover_tests(test_lib)
